@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--    加了之后切换页面不会销毁-->
+    <keep-alive exclude="Detile">
+      <router-view></router-view>
+    </keep-alive>
+    <daohang></daohang>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  import daohang from "components/content/daohang"
+
+  export default {
+    name: 'App',
+    components: {
+      daohang
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  /*<!--引入css的方式-->*/
+  @import "assets/css/base.css";
 </style>

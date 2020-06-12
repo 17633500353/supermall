@@ -1,0 +1,13 @@
+@import "./normalize.css";
+body{
+    padding: 0;
+    margin: 0;
+}
+/*css根目录下定义变量*/
+:root{
+    --color:red;
+}
+
+h1{
+    color: var(--color);
+}
